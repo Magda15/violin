@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	<style>
+	.myTableStyle {
+			border: 1px solid gray;
+			border-color: black;
+			margin-bottom: 20px;
+		}
+	</style>
+	<table  class="myTableStyle" align = center>
+			<tr class="d0">
+				<th>Nume</th>
+				<th>Prenume</th>
+				<th>Varsta</th>
+				<!--<th>Data angajare</th>-->
+				<th>Departament</th>
+				
+			</tr>
+			<tbody>
+			</tbody>
+
+	</table>
+	<script>
+	
+	function add() {
+	
+	var angajat=new Array();
+	angajat[0]={nume:"Popescu",prenume:"Gina",varsta:21,departament:"Tester"};
+	angajat[1]={nume:"Ionescu",prenume:"Maria",varsta:22,departament:"Asistent"};
+	angajat[2]={nume:"Buraga",prenume:"Costel",varsta:23,departament:"Developer"};
+	angajat[3]={nume:"Lucanu",prenume:"Dorel",varsta:22,departament:"Developer"};
+	angajat[4]={nume:"Maria",prenume:"Popalau",varsta:25,departament:"Resurse"};
+	var table=document.getElementsByTagName("tbody")[0];
+
+	for(var i=0;i<5;i++) {
+	
+		var row=document.createElement("tr");
+		table.appendChild(row);
+		
+		 var data=document.createElement("td");
+		 row.appendChild(data);
+		 data.innerHTML=angajat[i].prenume;
+		  
+		  var data=document.createElement("td");
+		  row.appendChild(data);
+		  data.innerHTML=angajat[i].nume;
+		  
+		  	  
+		  var data=document.createElement("td");
+		  row.appendChild(data);
+		  data.innerHTML=angajat[i].varsta;
+		  
+		   var data=document.createElement("td");
+		  row.appendChild(data);
+		  data.innerHTML=angajat[i].departament;
+		  
+		
+	}
+}
+add();
+</script>
+</body>
+
+</html>
